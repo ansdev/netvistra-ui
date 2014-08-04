@@ -10,7 +10,38 @@ module.exports = function (grunt) {
     tempDir: 'tmp',
     docsDir: 'docs/',
     unitTests: 'test/unit/specs/**/*.js',
-    unitTestDir: 'test/unit/'
+    unitTestDir: 'test/unit/',
+    debian_package: {
+      options: {
+        maintainer: {
+          name: "Applied Network Solutions",
+          email: "info@ansfederal.com"
+        },
+        prefix: "",
+        name: "netvistra-ui",
+        postfix: "",
+        short_description: "NetVistra UI",
+        long_description: "This is a custom build of the ElasticSearch " +
+                          "Kibana project provided by the NetVistra team " + 
+                          "at Applied Network Solutions",
+        version: "1.0",
+        build_number: "1",
+        links: [],
+        directories: []
+      },
+      files: 
+        {
+          expand: true,
+          cwd: 'dist/',
+          src: [
+            '**/*.js',
+            '**/*.html',
+            '**/*.css',
+            '**/*.json'
+          ],
+          dest: '/usr/share/netvistra-ui'
+        }
+    }
   };
 
   // load plugins
