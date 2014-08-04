@@ -6,16 +6,18 @@ define([
   'jquery',
   'lodash',
   'require',
+  'config',
   'elasticjs',
   'bootstrap',
   'angular-sanitize',
   'angular-strap',
   'angular-dragdrop',
   'angular-cookies',
+  'angular-route',
   'extend-jquery',
   'bindonce',
 ],
-function (angular, $, _, appLevelRequire) {
+function (angular, $, _, appLevelRequire, config) {
 
   "use strict";
 
@@ -85,6 +87,13 @@ function (angular, $, _, appLevelRequire) {
         redirectTo: 'dashboard'
       });
 
+    // register elasticsearch.js
+    $provide.service('es', function(esFactory) {
+      return esFactory({
+        host: config.elasticsearch
+      });
+    });
+
     // this is how the internet told me to dynamically add modules :/
     register_fns.controller = $controllerProvider.register;
     register_fns.directive  = $compileProvider.directive;
@@ -94,11 +103,12 @@ function (angular, $, _, appLevelRequire) {
   });
 
   var apps_deps = [
-    'elasticjs.service',
+    'elasticsearch',
     '$strap.directives',
     'ngSanitize',
     'ngDragDrop',
     'ngCookies',
+    'ngRoute',
     'kibana',
     'pasvaz.bindonce'
   ];

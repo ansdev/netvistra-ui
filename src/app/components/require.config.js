@@ -21,6 +21,7 @@ require.config({
     'angular-dragdrop':       '../vendor/angular/angular-dragdrop',
     'angular-strap':          '../vendor/angular/angular-strap',
     'angular-sanitize':       '../vendor/angular/angular-sanitize',
+    'angular-route':          '../vendor/angular/angular-route',
     timepicker:               '../vendor/angular/timepicker',
     datepicker:               '../vendor/angular/datepicker',
     bindonce:                 '../vendor/angular/bindonce',
@@ -47,7 +48,8 @@ require.config({
     modernizr:                '../vendor/modernizr-2.6.1',
     numeral:                  '../vendor/numeral',
     jsonpath:                 '../vendor/jsonpath',
-    elasticjs:                '../vendor/elasticjs/elastic-angular-client',
+    elasticjs:                '../vendor/elasticjs/elastic',
+    elasticsearch:            '../vendor/elasticsearch/elasticsearch.angular',
   },
   shim: {
     angular: {
@@ -97,7 +99,8 @@ require.config({
     timepicker:             ['jquery', 'bootstrap'],
     datepicker:             ['jquery', 'bootstrap'],
 
-    elasticjs:              ['angular', '../vendor/elasticjs/elastic']
+    elasticsearch:          ['angular'],
+    elasticjs:              {deps: ['elasticsearch'], exports: 'ejs'}
   },
   waitSeconds: 60,
 });
