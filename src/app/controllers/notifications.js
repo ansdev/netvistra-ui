@@ -11,8 +11,5 @@ function (angular) {
     $scope.acknowledge = function(index) {
       $scope.notifications.splice(index, 1);
     };
-    $scope.socket.on('event', function(data) {
-      $scope.notifications.push(data);
-    });
   });
 });
