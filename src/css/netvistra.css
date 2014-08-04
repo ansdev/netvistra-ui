@@ -1,0 +1,91 @@
+
+body {
+  padding-top: 100px;
+}
+
+#nvlogo {
+  background: url('../img/bg_nv_header.png') repeat-x;
+  border-bottom: 4px solid #ED8530;
+}
+
+.navbar-inner {
+  background-color: #1F3A4D;
+  min-height: 20px;
+}
+
+#nvlogo .brand {
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+
+#nvlogo .brand img {
+  padding-right: 25px;
+}
+
+ul.nav > li {
+  border-bottom: 1px solid #101F29;
+  border-left: 1px solid #101F29;
+  border-right: 1px solid #101F29;
+}
+
+.navbar .nav > li > a {
+  padding: 10px 10px 10px;
+}
+
+.navbar .nav > li > a > i {
+  font-size: 20px;
+}
+
+.navbar .nav {
+  margin: 0px;
+}
+
+.navbar .timepicker-dropdown li {
+  border-bottom: none;
+}
+
+.navbar .timepicker-dropdown li:last-child {
+  border-right: none;
+}
+
+.panel-header .panel-extra {
+  padding: 10px;
+}
+
+.row-fluid {
+  width: auto;
+}
+
+.panel-container {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 0px;
+}
+
+.modal-body {
+  overflow-y: visible;
+}
+
+.bgPrimary {
+  background-color: #797979;
+}
+
+.bgWarning {
+  background-color: #203a4f;
+}
+
+.bgSuccess {
+  background-color: #ec8700;
+}
+
+.alert {
+  /*border-radius: 5px;*/
+  -moz-box-shadow:    3px 3px 2px 0px #ccc;
+  -webkit-box-shadow: 3px 3px 2px 0px #ccc;
+  box-shadow:         3px 3px 2px 0px #ccc;
+}
+
+.alert-warning {
+  background-color: #ec8700;
+  color: #ffffff;
+}

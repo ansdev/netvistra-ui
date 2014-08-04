@@ -1,0 +1,18 @@
+.panel {
+  border: 3px solid #333333;
+  background-color: #333333;
+}
+
+.panel-container {
+  border: 1px solid #444444;
+  background-color: #1F1F1F;
+}
+
+.panel-header {
+  background-color: #333333;
+  background-image: linear-gradient(to bottom, #444444, #333333);
+  background-repeat: repeat-x;
+  border-bottom: solid rgba(100, 100, 100, 0.5);
+  color: #EEEEEE;
+}
+

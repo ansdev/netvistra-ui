@@ -1,0 +1,29 @@
+body {
+  background-color: #ffffff;
+}
+
+.modal {
+  position: fixed;
+}
+
+.panel {
+  border: 3px solid #ffffff;
+}
+
+.bgNav, .top-row-open {
+  background-color: #ffffff;
+}
+
+.panel-container {
+  border: 1px solid #E2E2E2;
+  background-color: #ffffff;
+}
+
+.panel-header {
+  background-color: #F1F1F1;
+  background-image: linear-gradient(to bottom, #F4F4F4, #ECECEC);
+  background-repeat: repeat-x;
+  border-bottom: 1px solid #D5D5D5;
+  color: #333333;
+}
+
