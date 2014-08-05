@@ -9,7 +9,8 @@ module.exports = function(config) {
         quite: true,
         compress: true,
         preserveComments: false,
-        banner: '<%= meta.banner %>'
+        banner: '<%= meta.banner %>',
+        mangle: false
       }
     }
   };

@@ -29,18 +29,29 @@ module.exports = function (grunt) {
         links: [],
         directories: []
       },
-      files: 
-        {
-          expand: true,
-          cwd: 'dist/',
-          src: [
-            '**/*.js',
-            '**/*.html',
-            '**/*.css',
-            '**/*.json'
-          ],
-          dest: '/usr/share/netvistra-ui'
-        }
+      dynamic_mappings: {
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: [
+              '**/*.js',
+              '**/*.html',
+              '**/*.css',
+              '**/*.json',
+              '**/*.png',
+              '**/*.gif'
+            ],
+            dest: '/usr/share/netvistra-ui'
+          },
+          {
+            expand: true,
+            cwd: 'config',
+            src: [ '**/*' ],
+            dest: '/etc'
+          }
+        ]
+      }
     }
   };
 

@@ -380,8 +380,8 @@ function (angular, $, kbn, _, config, ejs, moment, Modernizr) {
         method: "GET",
         transformResponse: function(response) {
           /*jshint -W054 */
-          var _f = new Function('ARGS','kbn','_','moment','window','document','angular','require','define','$','jQuery', 'ejs', response);
-          return _f($routeParams, kbn, _, moment, window, document, angular, require, define, $, jQuery, ejs);
+          var _f = new Function('ARGS','kbn','_','moment','window','document','angular','require','define','$', 'ejs', response);
+          return _f($routeParams, kbn, _, moment, window, document, angular, require, define, $, ejs);
         }
       }).then(function(result) {
         if(!result) {

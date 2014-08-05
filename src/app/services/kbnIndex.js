@@ -31,7 +31,6 @@ function (angular, _, config, moment) {
     // returns a promise containing an array of all indices in an elasticsearch
     // cluster
     function resolve_indices(indices) {
-      var something;
       indices = _.uniq(_.map(indices,  encodeURIComponent));
 
       return es.indices.getAlias({'ignoreUnavailable': true, 'index': indices.join(",")}).then(function(p) {
@@ -55,7 +54,7 @@ function (angular, _, config, moment) {
             alertSrv.set('Error',"Unable to fetch aliases: " + err.message, 'error');
           }
           return [];
-      });
+        });
     }
 
     /*
