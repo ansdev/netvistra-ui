@@ -1,0 +1,10 @@
+root /usr/share/netvistra-ui;
+index index.html index.htm;
+
+location / {
+  try_files $uri $uri/ =404;
+}
+
+location /es/ {
+  proxy_pass http://localhost:9200/;
+}
